@@ -21,40 +21,6 @@ A Python-based project to ingest, store, and analyze real-time stock market data
 2. **Processing**: Kafka consumer reads data and writes it to S3 as CSV/JSON.
 3. **Data Cataloging**: AWS Glue Crawler crawls the S3 bucket to create a table in AWS Glue Data Catalog.
 4. **Querying**: Athena queries the Glue table for data analysis.
-5. **Visualization**: Python scripts retrieve data using `boto3` + `PyAthena` and plot it using `matplotlib` or `plotly`.
+5. **Visualization**: Python scripts retrieve data using `boto3` + `pandas` and plot it using `matplotlib` or `seaborn`.
 
 ---
-
-## 📊 Visualization Code (Python)
-
-```python
-from pyathena import connect
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Athena + S3 connection
-s3_output = "s3://your-athena-query-results/"
-conn = connect(s3_staging_dir=s3_output, region_name='us-east-1')
-
-# Example query
-query = """
-SELECT symbol, price, timestamp
-FROM stock_data
-WHERE symbol = 'AAPL'
-ORDER BY timestamp DESC
-LIMIT 100
-"""
-
-df = pd.read_sql(query, conn)
-df['timestamp'] = pd.to_datetime(df['timestamp'])
-
-# Plotting
-plt.figure(figsize=(12, 6))
-plt.plot(df['timestamp'], df['price'], marker='o')
-plt.title("AAPL Stock Price Over Time")
-plt.xlabel("Timestamp")
-plt.ylabel("Price")
-plt.grid(True)
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
