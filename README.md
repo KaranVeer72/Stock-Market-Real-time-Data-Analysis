@@ -30,6 +30,9 @@ A Python-based project to ingest, store, and analyze real-time stock market data
 ---
 ## Stock Visualization
 Below is the DataFrame and the Bar graph for the following dataset :
+
+
+---
         index  count
 0       N225     45
 1        NYA     41
