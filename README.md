@@ -29,7 +29,8 @@ A Python-based project to ingest, store, and analyze real-time stock market data
 
 ---
 ## Stock Visualization
-     index  count
+--
+        index  count
 0       N225     45
 1        NYA     41
 2     GSPTSE     34
