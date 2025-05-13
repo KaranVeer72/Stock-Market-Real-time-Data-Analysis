@@ -28,3 +28,6 @@ A Python-based project to ingest, store, and analyze real-time stock market data
 5. **Visualization**: Python scripts retrieve data using `boto3` + `pandas` and plot it using `matplotlib` or `seaborn`.
 
 ---
+## Dataset Used
+The Dataset used for the project :
+https://github.com/KaranVeer72/Stock-Market-Real-time-Data-Analysis/blob/main/indexProcessed.csv
