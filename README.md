@@ -15,7 +15,8 @@ A Python-based project to ingest, store, and analyze real-time stock market data
 
 ---
 ## Architecture 
-
+  
+![Architecture](https://github.com/user-attachments/assets/121d230a-ce9e-4dc6-aac5-d4fd24e6fa87)
 
 
 ## ⚙️ Workflow
