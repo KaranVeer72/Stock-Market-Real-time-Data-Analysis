@@ -14,6 +14,9 @@ A Python-based project to ingest, store, and analyze real-time stock market data
 - **Visualization**: Python (Pandas + Matplotlib/Plotly)
 
 ---
+## Architecture 
+
+
 
 ## ⚙️ Workflow
 
